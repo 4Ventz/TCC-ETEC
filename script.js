@@ -8,7 +8,7 @@ inputOriginal.addEventListener("keydown", (e) => {
     }
 });
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "";
 
 function enviarCodigo() {
     var eCodigo = inputOriginal.value;
