@@ -1,0 +1,16 @@
+:root {
+    --amarelo: #C8C348;
+    --amareloDestaque: #E1DC5F;
+    --laranja: #C77905;
+    --cinzaBg: #272727;
+    --begeBg: #F5F2D0;
+    
+    --peso-titulo-destaque: 900;
+    --peso-botao: 700;
+    --peso-destaque: 700;
+
+    --tamanho-corpo: 1rem;
+    --tamanho-titulo: 1.375rem;
+    --tamanho-titulo-destaque: 2rem;
+    --tamanho-destaque: 1.375rem;
+}

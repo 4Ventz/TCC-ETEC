@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/base.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <title>Home | ULC</title>
+  </head>
+
+  <body>
+    <div class="pagina">
+      <!-- menu lateral -->
+      <div id="sidebar" class="menu-lateral">
+        <div class="conteudo-sidebar">
+          <a href="index.html" class="menu-item">Home</a>
+          <a href="traducao.html" class="menu-item">Comece a Traduzir!</a>
+          <a href="#" class="menu-item">Tutorial</a>
+          <a href="#" class="menu-item">Dúvidas frequêntes</a>
+          <a href="#" class="menu-item">Contato</a>
+        </div>
+      </div>
+
+      <!-- navbar -->
+      <section class="w-100">
+        <nav>
+          <ul class="menu">
+            <li class="icone">
+              <a href="#" id="MenuBtn" class="menu-btn">
+                <i class="material-icons">menu</i>
+              </a>
+              <p class="icone-nav-texto">ULC</p>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="traducao.html">Traduzir</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+
+        <section class="conteudo">
+          <!-- card Conheça um novo mundo -->
+          <div class="container-card">
+            <div class="box">
+              <div class="text">
+                <p class="texto-card-btn">
+                  Conheça um novo mundo com todas as linguagens de programação
+                  nas suas mãos
+                </p>
+                <a href="./traducao.html" class="primario">Comece agora!</a>
+              </div>
+              <img src="./img/logo-ULC.png" alt="Logo ULC" />
+            </div>
+          </div>
+
+          <!--Destaque-->
+          <div class="container-destaque">
+            <div class="div-circulo">
+              <div class="circulo"></div>
+              <p class="circulo-txt">
+                Inicialmente com 2 linguagens e documentação.
+              </p>
+            </div>
+            <div class="div-circulo">
+              <div class="circulo"></div>
+              <p class="circulo-txt">Tradução simultânea.</p>
+            </div>
+          </div>
+
+          <!--card O que é ULC?-->
+          <div class="container-ulc">
+            <div class="box-ulc">
+              <img src="./img/logo-ULC.png" alt="Logo ULC" />
+              <div class="heading">
+                <h3 class="h3-ulc">O que é a ULC?</h3>
+              </div>
+              <div class="text-ulc">
+                <p class="texto-card-ulc">
+                  Um software que realiza tradução simultânea de uma linguagem
+                  de programação para uma outra e dando acesso rápido a
+                  documentação de cada linguagem, dando base nos conhecimentos
+                  novos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--card ofertas -->
+          <div class="card-oferta">
+            <h3 class="titulo-oferta">Oferecemos aos usuários</h3>
+            <div class="div-circulo-oferta">
+              <div class="circulo-oferta"></div>
+              <p class="circulo-txt-oferta">
+                Tradução de linguagem de programação X para Y.
+              </p>
+            </div>
+            <div class="div-circulo-oferta">
+              <div class="circulo-oferta"></div>
+              <p class="circulo-txt-oferta">
+                Documentação para aprimorar os seus conhecimentos.
+              </p>
+            </div>
+            <div class="div-circulo-oferta">
+              <div class="circulo-oferta"></div>
+              <p class="circulo-txt-oferta">
+                Auxílio nos estudos e melhora da lógica para programar e SAC
+                para tirar as dúvidas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Seja Parceiro -->
+          <div class="container-parceiro">
+            <img src="/img/parceiro.jpg" alt="parceiro" style="width: 100%" />
+            <div class="conteudo-parceiro">
+              <p class="txt-parceiro">
+                Seja parceiro da ULC e leve para a sua escola ou projeto!
+              </p>
+            </div>
+          </div>
+
+          <footer>
+            <p>ULC - 2023</p>
+          </footer>
+        </section>
+      </section>
+    </div>
+
+    <!-- JavaScript-->
+    <script>
+      // Itens
+      const sidebar = document.getElementById("sidebar");
+      const menuBtn = document.getElementById("MenuBtn");
+
+      // Clicou no menu
+      menuBtn.onclick = () => {
+        sidebar.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

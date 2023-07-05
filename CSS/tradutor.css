@@ -1,0 +1,38 @@
+@import url(componentes/navbar.css);
+@import url(componentes/botao.css);
+
+.chamada-traducao {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+}
+
+.texto-traducao {
+    color: white;
+    font-size: 18px;
+    margin-top: 10px ;
+    margin-left: 10px;
+}
+
+
+
+/* form */
+label {
+    margin-bottom: 25px;
+    color: white;
+    font-size: 20px;
+  }
+
+textarea {
+    width: 100%;
+    background-color: var(--amarelo);
+    height: 250px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 25px;
+}
+
+.caixa-texto-traduzido {
+    margin-top: 50px;
+}

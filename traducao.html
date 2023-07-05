@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/base.css" />
+  <link rel="stylesheet" href="CSS/tradutor.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/index.css" />
+  <title>Tradutor | ULC</title>
+</head>
+
+
+<body>
+  <div class="pagina">
+    <!-- menu lateral -->
+    <div id="sidebar" class="menu-lateral">
+      <div class="conteudo-sidebar">
+        <a href="index.html" class="menu-item">Home</a>
+        <a href="traducao.html" class="menu-item">Comece a Traduzir!</a>
+        <a href="#" class="menu-item">Tutorial</a>
+        <a href="#" class="menu-item">Dúvidas frequêntes</a>
+        <a href="#" class="menu-item">Contato</a>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <section class="w-100">
+      <nav>
+        <ul class="menu">
+          <li class="icone">
+            <a href="#" id="MenuBtn" class="menu-btn">
+              <i class="material-icons">menu</i>
+            </a>
+            <p class="icone-nav-texto">ULC</p>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="traducao.html">Traduzir</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+
+      <section class="conteudo">
+        <div class="chamada-traducao">
+          <p class="texto-traducao">
+            Quer traduzir um código rapidamente para uma outral linguagem?
+          </p>
+          <p class="texto-traducao">
+            Está no lugar certo, utilize as nossas caixinhas abaixo para
+            traduzir!
+          </p>
+        </div>
+
+
+        <div class="caixa-texto">
+          <label for="codigoOriginal">Linguagem Original:</label>
+          <br>
+          <textarea id="codigoOriginal" rows="4" cols="50"></textarea>
+        </div>
+        <div class="caixa-texto">
+          <label for="codigoTraduzido">Linguagem Traduzida:</label>
+          <br>
+          <textarea id="codigoTraduzido" rows="4" cols="50" disabled></textarea>
+        </div>
+        <button onclick="enviarCodigo()">Traduzir</button>
+
+
+
+        <script>
+          const codigoOriginal = document.getElementById("codigoOriginal");
+          const codigoTraduzido = document.getElementById("codigoTraduzido");
+
+          const OPENAI_API_KEY = "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";
+          const link = "https://api.openai.com/v1/chat/completions";
+          const idModelo = "gpt-3.5-turbo";
+
+          async function enviarCodigo() {
+            const prompt = "Traduza de Portugol para a linguagem C retornando apenas o código e adicionando as devidas bibliotecas.";
+            const codigo = codigoOriginal.value;
+
+            const body = {
+              model: idModelo,
+              messages: [
+              { role: "system", content: prompt },
+              { role: "user", content: codigo }
+              ]
+            };
+
+            const headers = {
+              "Authorization": `Bearer ${OPENAI_API_KEY}`,
+              "Content-Type": "application/json"
+            };
+
+            try {
+              const response = await fetch(link, {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(body)
+              });
+
+              const data = await response.json();
+              const traducao = data.choices[0].message.content;
+              codigoTraduzido.value = traducao;
+            } catch (error) {
+              console.error("Erro:", error);
+            }
+          }
+        </script>
+</body>
+
+</html>

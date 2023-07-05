@@ -1,0 +1,85 @@
+@import url(reset.css);
+@import url(variaveis.css);
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    background-color: var(--cinzaBg);
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.pagina {
+  display: flex;
+  height: 100vh;
+  align-items: stretch;
+} 
+
+.conteudo {
+  margin: 10px 120px;
+}
+
+
+
+/* menu lateral */
+.menu-lateral {
+    height: 100%;
+    max-width: 280px;
+    min-width: 280px;
+    margin-left: -290px;
+    background-color: var(--amarelo);
+    transition: all 0.3s;
+    padding-top: 60px;
+    border-radius: 0 40px 0 0 ;
+    margin-right: 10px;
+  }
+
+  .active {
+    margin-left: 0px;
+  }
+
+  .conteudo-sidebar {
+    height: 90vh;
+    overflow-y: auto;
+  }
+
+  .menu-item {
+    display: flex;
+    padding: 16px 20px 16px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    justify-content: space-between;
+  }
+  
+  .menu-item:hover {
+    background-color: var(--amareloDestaque);
+  }
+
+
+  /* footer */
+  footer {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  footer p {
+    font-size: 16px;
+    color: white;
+  }

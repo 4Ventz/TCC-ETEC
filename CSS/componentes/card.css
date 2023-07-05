@@ -1,0 +1,108 @@
+@import url(botao.css);
+
+/* Card Novo mundo */
+.container-card { 
+    background: #272727;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+}
+
+.box img {
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+
+.texto-card-btn {
+    color: white;
+    margin: 20px 40px 10px 0;
+    padding-top: 30px;
+    font-size: 18px;
+}
+
+
+
+/* card ulc */
+.container-ulc { 
+    background: #272727;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box-ulc {
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.box-ulc .heading, .box-ulc .text-ulc {
+    width: 100%;
+    padding: 0 5px;
+    min-width: 50px;
+    float: right;
+    width: 40%;
+    padding-left: 60px;
+}
+
+.box-ulc img {
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 20px;
+    float: left;
+}
+
+.texto-card-ulc {
+    color: white;
+    font-size: 18px;
+}
+
+.h3-ulc {
+    color: var(--amarelo);
+    font-size: 20px;
+    text-align: right;
+    padding: 60px 60px 10px 0px;
+    width: 100%;
+}
+
+@media (max-width: 1000px)
+{
+.box {
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction:column-reverse;
+  }
+  
+  .box img {
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 10px; /* Adiciona margem inferior para separar a imagem do texto */
+  }
+  
+  .texto-card-btn {
+    color: white;
+    margin: 20px 40px 10px 0;
+    font-size: 18px;
+    text-align: center; /* Alinha o texto ao centro */
+    align-items: center;
+  }
+}
